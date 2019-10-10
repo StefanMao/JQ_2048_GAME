@@ -1,7 +1,7 @@
 
 
 function showNumberWithAnimation(i, j, randNumber) {
-    var numberCell = $('#number-cell-' + i + "-" + j);
+    var numberCell = $('#number_cell_' + i + "_" + j);
  
     numberCell.css('background-color', getNumberBackgroundColor(randNumber));
     numberCell.css('color', getNumberColor(randNumber));
@@ -16,12 +16,12 @@ function showNumberWithAnimation(i, j, randNumber) {
 }
  
 // --------------------------------------------------------------------------------------------------------------------
-/* 移动数字的动画：
- * 从 x=fromx,y=fromy 的位置 移动到  x=tox,y=toy 的位置
- * 在这个显示过程中 设置了一个200毫秒的动画效果
+/* 移動數字動畫：
+ * 從 x=fromx,y=fromy 的位置 移动到  x=tox,y=toy 的位置
+ * 顯示過程中 設置了一个200毫秒的动画效果
  */
 function  showMoveAnimation(fromx, fromy, tox, toy){
-    var numberCell = $('#number-cell-' + fromx + '-' +fromy );
+    var numberCell = $('#number_cell_' + fromx + '_' +fromy );
     numberCell.animate({
         top:getPosition( tox ),
         left:getPosition( toy )
@@ -29,7 +29,7 @@ function  showMoveAnimation(fromx, fromy, tox, toy){
 }
  
 // --------------------------------------------------------------------------------------------------------------------
-// 分数刷新显示，此处未设置动画
+// 分數刷新顯示
 function  UpdateScore(score){
     $('#score').text(score);
 }
